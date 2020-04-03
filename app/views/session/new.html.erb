@@ -1,0 +1,7 @@
+<%=form_for @user, url: session_path, method: 'post' do |f|%>
+    <%= f.label :user_id, "Please select your username from this dropdown"%>
+    <%= f.collection_select :name, User.all, :name, :name%>
+    <%= f.label :password, "Your password"%>
+    <%= f.password_field :password%>
+    <%= f.submit "Sign In"%>
+<%end%>
